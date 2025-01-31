@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
 
     if (isValid) {
+      feedbackDiv.style.display = "block"
       feedbackDiv.innerHTML = "Registration successful!"
       feedbackDiv.style.color = "#28a745"
     } else {
