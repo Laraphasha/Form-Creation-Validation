@@ -16,17 +16,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (username.length < 3) {
       isValid = false
-      messages.join("Username is too short")
+      messages.push("Username is too short")
     }
 
     if ((email.includes("@")) && (email.includes("."))) {
       isValid = false
-      messages.join("Invalid email address")
+      messages.push("Invalid email address")
     }
 
     if (password.length < 8) {
       isValid = false
-      messages.join("Password is too short")
+      messages.push("Password is too short")
     }
 
     if (isValid) {
