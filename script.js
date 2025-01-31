@@ -21,17 +21,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if ((email.includes("@")) && (email.includes("."))) {
       isValid = false
-      messages.push("Invalid email address")
+      messages.join("Invalid email address")
     }
 
     if (password.length < 8) {
       isValid = false
-      messages.push("Password is too short")
+      messages.join("Password is too short")
     }
 
     if (isValid) {
       feedbackDiv.innerHTML = "Registration successful!"
       feedbackDiv.style.color = "#28a745"
+    } else {
+      feedbackDiv.innerHTML = messages.join("<br>")
+      feedbackDiv.style.color = "#dc3545"
     }
   })
 })
