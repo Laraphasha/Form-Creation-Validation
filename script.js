@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     if (username.length < 3) {
       isValid = false
-      messages.push("Username is too short")
+      messages.join("Username is too short")
     }
 
     if ((email.includes("@")) && (email.includes("."))) {
